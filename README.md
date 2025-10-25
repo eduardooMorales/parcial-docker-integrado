@@ -30,3 +30,25 @@ CREATE TABLE estudiantes (
 
 INSERT INTO estudiantes (nombre, expediente)
 VALUES ('Estiven', 'EXP123'), ('Ana', 'EXP456');
+
+
+## Ejercicio 3 – Integración con Docker Compose
+
+### Comandos ejecutados:
+- docker compose up -d --build
+
+### Configuración:
+- Servicios: `api` y `db`
+- Red: `default`
+- Volumen: `db_data`
+- Variables de entorno: `.env`
+- Comunicación entre contenedores: exitosa
+
+### Validación:
+- API responde en `localhost:3000`
+- Base de datos accesible desde contenedor
+- Datos persisten tras reinicio
+
+### Evidencias:
+- Capturas en `/docs/evidencias`
+
