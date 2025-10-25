@@ -11,3 +11,22 @@ docker build -t parcial-api .
 docker run -d -p 3000:3000 parcial-api
 curl http://localhost:3000/
 curl http://localhost:3000/health
+
+
+## Ejercicio 2 – Persistencia con PostgreSQL
+
+### Comandos ejecutados:
+- docker volume create db_data
+- docker run -d --name parcial-db ...
+- docker exec -it parcial-db psql -U admin -d parcial_db
+
+### SQL ejecutado:
+```sql
+CREATE TABLE estudiantes (
+  id SERIAL PRIMARY KEY,
+  nombre TEXT NOT NULL,
+  expediente TEXT NOT NULL
+);
+
+INSERT INTO estudiantes (nombre, expediente)
+VALUES ('Estiven', 'EXP123'), ('Ana', 'EXP456');
