@@ -44,11 +44,6 @@ VALUES ('Estiven', 'EXP123'), ('Ana', 'EXP456');
 - Variables de entorno: `.env`
 - Comunicación entre contenedores: exitosa
 
-### Validación:
-- API responde en `localhost:3000`
-- Base de datos accesible desde contenedor
-- Datos persisten tras reinicio
 
-### Evidencias:
-- Capturas en `/docs/evidencias`
+
 
